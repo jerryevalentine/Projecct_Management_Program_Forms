@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{46A4CF03-1DAC-416F-91B7-5F6217BC9099}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectManagmementRTM</RootNamespace>
+    <AssemblyName>ProjectManagmementRTM</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Cheat_Sheets\CSS_Examples\CSS_Cheat_sheet.html" />
+    <Content Include="Cheat_Sheets\CSS_Examples\CSS_Cheat_Sheet.png" />
+    <Content Include="Cheat_Sheets\CSS_Examples\CSS_Style_Examples\index.css" />
+    <Content Include="Cheat_Sheets\CSS_Examples\CSS_Style_Examples\index.html" />
+    <Content Include="Cheat_Sheets\CSS_Examples\index.html" />
+    <Content Include="Cheat_Sheets\HTML_Commands\index.html" />
+    <Content Include="Cheat_Sheets\HTML_Examples\html5_cheat_sheet.html" />
+    <Content Include="Cheat_Sheets\HTML_Examples\html5_cheat_sheet.png" />
+    <Content Include="Cheat_Sheets\HTML_Examples\HTML_examples.html" />
+    <Content Include="Cheat_Sheets\HTML_Examples\index.html" />
+    <Content Include="Cheat_Sheets\HTML_Examples\ultimate_html_cheat_sheet.html" />
+    <Content Include="Cheat_Sheets\HTML_Examples\ultimate_html_cheat_sheet.jpg" />
+    <Content Include="Cheat_Sheets\index.html" />
+    <Content Include="Cheat_Sheets\Javascript_Examples\DateTime\index.html" />
+    <Content Include="Cheat_Sheets\Javascript_Examples\index.html" />
+    <Content Include="Cheat_Sheets\Javascript_Examples\index.js" />
+    <Content Include="Cheat_Sheets\Javascript_Examples\javascriptcheatsheet.jpg" />
+    <Content Include="Cheat_Sheets\Javascript_Examples\LightBulb\LightBulb.html" />
+    <Content Include="Cheat_Sheets\Javascript_Examples\LightBulb\pic_bulboff.gif" />
+    <Content Include="Cheat_Sheets\Javascript_Examples\LightBulb\pic_bulbon.gif" />
+    <Content Include="Cheat_Sheets\Javascript_Examples\Navigation_Button\index.html" />
+    <Content Include="Cheat_Sheets\Javascript_Examples\Navigation_Button\navigation_button.html" />
+    <Content Include="Cheat_Sheets\Javascript_Examples\OnClick\index.html" />
+    <Content Include="Cheat_Sheets\Javascript_Examples\OnClick\index.js" />
+    <Content Include="CIS_50\index.html" />
+    <Content Include="CIS_50\Information Architecture\index.html" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="create-project.aspx" />
+    <Content Include="css\bootstrap-grid.css" />
+    <Content Include="css\bootstrap-grid.min.css" />
+    <Content Include="css\bootstrap-reboot.css" />
+    <Content Include="css\bootstrap-reboot.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\template.html" />
+    <Content Include="database\createTable.js" />
+    <Content Include="database\demoQuery.js" />
+    <Content Include="database\insertData.js" />
+    <Content Include="database\queryData.js" />
+    <Content Include="database\test.js" />
+    <Content Include="database\test2.js" />
+    <Content Include="database\test3.js" />
+    <Content Include="database\test4.js" />
+    <Content Include="database\test5.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="HTMLAssignment7\agileTeamStructure.png" />
+    <Content Include="HTMLAssignment7\images\Agile-Scrum-User-stories-Agile-Scrum-Belgium-Training.png" />
+    <Content Include="HTMLAssignment7\images\agile-team-structure.jpg" />
+    <Content Include="HTMLAssignment7\images\agileTeamStructure.png" />
+    <Content Include="HTMLAssignment7\images\ASSET-3-User-Story-Example-on-Designing-for-FinTech-Mobile-Apps.png" />
+    <Content Include="HTMLAssignment7\images\Dani-Kahil-User-Story-cover-3.jpg" />
+    <Content Include="HTMLAssignment7\images\initiative-epic-story-subtask.png" />
+    <Content Include="HTMLAssignment7\images\JustInMind-user-story-examples-agile-usa.png" />
+    <Content Include="HTMLAssignment7\images\Konrad-User-Stories-vs-Job-Stories-How-to-Use.svg" />
+    <Content Include="HTMLAssignment7\images\likedin-great-user-stories.png" />
+    <Content Include="HTMLAssignment7\images\likedin-user-stories-epic-story-subtask.png" />
+    <Content Include="HTMLAssignment7\images\product-deliveray-agile.png" />
+    <Content Include="HTMLAssignment7\images\simpliaxis-user-story-templates-examples.htm" />
+    <Content Include="HTMLAssignment7\images\what-is-a-story-map.png" />
+    <Content Include="HTMLAssignment7\assignment-7-instructions.html" />
+    <Content Include="HTMLAssignment7\index.html" />
+    <Content Include="HTMLAssignment7\jerrys-second-web-page.html" />
+    <Content Include="ProjectManagementRTM\BusinessAssUsual\index.html" />
+    <Content Include="ProjectManagementRTM\Deployment\index.html" />
+    <Content Include="ProjectManagementRTM\Design\index.html" />
+    <Content Include="ProjectManagementRTM\Development\index.html" />
+    <Content Include="ProjectManagementRTM\Functional\index.html" />
+    <Content Include="ProjectManagementRTM\Global.asax" />
+    <Content Include="HTMLAssignment5\index.html" />
+    <Content Include="HTMLAssignment5\navbar\index.html" />
+    <Content Include="HTMLAssignment5\navbar\navbar.html" />
+    <Content Include="HTMLAssignment5\navbar\test.html" />
+    <Content Include="HTMLAssignment5\navigation.html" />
+    <Content Include="HTMLAssignment5\research.html" />
+    <Content Include="..\..\..\..\Desktop\Assignment 6\assignment-6.html">
+      <Link>HTMLAssignment6\assignment-6.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\Desktop\Assignment 6\css\valentine-externalCSSHomepage.CSS">
+      <Link>HTMLAssignment6\css\valentine-externalCSSHomepage.CSS</Link>
+    </Content>
+    <Content Include="HTMLAssignment6\index.html" />
+    <Content Include="images\project_management.jpg" />
+    <Content Include="Index.aspx" />
+    <Content Include="index.html" />
+    <Content Include="js\bootstrap.bundle.js" />
+    <Content Include="js\bootstrap.bundle.min.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\Buttons\buttons.html" />
+    <Content Include="js\index.html" />
+    <Content Include="js\navigation.html" />
+    <Content Include="js\navigation.js" />
+    <Content Include="js\navigation_old.html" />
+    <Content Include="js\script.js" />
+    <Content Include="ProjectManagementRTM\BusinessAssUsual\create-business-as-usual.aspx" />
+    <Content Include="ProjectManagementRTM\Design\create-design-items.aspx" />
+    <Content Include="ProjectManagementRTM\Deployment\create-deployment-items.aspx" />
+    <Content Include="ProjectManagementRTM\Development\create-development-items.aspx" />
+    <Content Include="ProjectManagementRTM\index.html" />
+    <Content Include="ProjectManagementRTM\Maintenance\create-function-requirement-items.aspx" />
+    <Content Include="ProjectManagementRTM\Maintenance\index.html" />
+    <Content Include="ProjectManagementRTM\Programs\create-program.aspx" />
+    <Content Include="ProjectManagementRTM\Programs\delete-program.aspx" />
+    <Content Include="ProjectManagementRTM\Programs\index.html" />
+    <Content Include="ProjectManagementRTM\Programs\search-program.aspx" />
+    <Content Include="ProjectManagementRTM\Programs\update-program.aspx" />
+    <Content Include="ProjectManagementRTM\Project\create-project.aspx" />
+    <Content Include="ProjectManagementRTM\Project\index.html" />
+    <Content Include="ProjectManagementRTM\Test\create-test-items.aspx" />
+    <Content Include="ProjectManagementRTM\Test\index.html" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Cheat_Sheets\Javascript_Examples\toptal.webp" />
+    <Content Include="Cheat_Sheets\Javascript_Examples\toptal2.webp" />
+    <Content Include="CIS_50\CIS50-Ch10-EditorialStyle.pdf" />
+    <Content Include="CIS_50\CIS50-Ch11-Images.pdf" />
+    <Content Include="CIS_50\CIS50-Ch2-Research.pdf" />
+    <Content Include="CIS_50\CIS50-Ch3-Process.pdf" />
+    <Content Include="CIS_50\CIS50-Ch4-InformationArchitecture.pdf" />
+    <Content Include="CIS_50\CIS50-Ch5-SiteStructure.pdf" />
+    <Content Include="CIS_50\CIS50-Ch6-PageStructure.pdf" />
+    <Content Include="CIS_50\CIS50-Ch7-InterfaceDesign.pdf" />
+    <Content Include="CIS_50\CIS50-Ch8-GrahpicDesign.pdf" />
+    <Content Include="CIS_50\CIS50-Ch9-Typography.pdf" />
+    <Content Include="CIS_50\CIS50-CSS.pdf" />
+    <Content Include="CIS_50\CIS50-HTML.pdf" />
+    <Content Include="CIS_50\CIS50-Multimedia.pdf" />
+    <Content Include="CIS_50\InternetAndTheWeb.pdf" />
+    <Content Include="CIS_50\Weebly Tutorial.pdf" />
+    <Content Include="css\bootstrap-grid.css.map" />
+    <Content Include="css\bootstrap-grid.min.css.map" />
+    <Content Include="css\bootstrap-reboot.css.map" />
+    <Content Include="css\bootstrap-reboot.min.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="js\bootstrap.bundle.js.map" />
+    <Content Include="js\bootstrap.bundle.min.js.map" />
+    <Content Include="js\bootstrap.js.map" />
+    <Content Include="js\bootstrap.min.js.map" />
+    <Content Include="HTMLAssignment7\images\Dani-Kahil-User-Story-cover-3.webp" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="test.html" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="create-project.aspx.cs">
+      <DependentUpon>create-project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="create-project.aspx.designer.cs">
+      <DependentUpon>create-project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\BusinessAssUsual\create-business-as-usual.aspx.cs">
+      <DependentUpon>create-business-as-usual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\BusinessAssUsual\create-business-as-usual.aspx.designer.cs">
+      <DependentUpon>create-business-as-usual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Design\create-design-items.aspx.cs">
+      <DependentUpon>create-design-items.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Design\create-design-items.aspx.designer.cs">
+      <DependentUpon>create-design-items.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Development\create-development-items.aspx.cs">
+      <DependentUpon>create-development-items.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Development\create-development-items.aspx.designer.cs">
+      <DependentUpon>create-development-items.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Maintenance\create-function-requirement-items.aspx.cs">
+      <DependentUpon>create-function-requirement-items.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Maintenance\create-function-requirement-items.aspx.designer.cs">
+      <DependentUpon>create-function-requirement-items.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Programs\create-program.aspx.cs">
+      <DependentUpon>create-program.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Programs\create-program.aspx.designer.cs">
+      <DependentUpon>create-program.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Programs\delete-program.aspx.cs">
+      <DependentUpon>delete-program.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Programs\delete-program.aspx.designer.cs">
+      <DependentUpon>delete-program.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Programs\search-program.aspx.cs">
+      <DependentUpon>search-program.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Programs\search-program.aspx.designer.cs">
+      <DependentUpon>search-program.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Programs\update-program.aspx.cs">
+      <DependentUpon>update-program.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Programs\update-program.aspx.designer.cs">
+      <DependentUpon>update-program.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Project\create-project.aspx.cs">
+      <DependentUpon>create-project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Project\create-project.aspx.designer.cs">
+      <DependentUpon>create-project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Deployment\create-deployment-items.aspx.cs">
+      <DependentUpon>create-deployment-items.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Deployment\create-deployment-items.aspx.designer.cs">
+      <DependentUpon>create-deployment-items.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Test\create-test-items.aspx.cs">
+      <DependentUpon>create-test-items.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectManagementRTM\Test\create-test-items.aspx.designer.cs">
+      <DependentUpon>create-test-items.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59709</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59709/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
